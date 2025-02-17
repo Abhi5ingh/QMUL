@@ -49,6 +49,14 @@ Run the script to train the GAN on MNIST:
 python train.py
 ```
 
+## 📊 Build/Deploy using Docker
+Deploying using docker on cloud:
+```sh
+docker build -t mnist-gan .
+docker run --gpus all -it mnist-gan
+```
+
+
 ## 🔍 Experimental Findings
 - **Effect of learning rate (0.01):** The generator failed to learn meaningful representations.
 - **Effect of batch size (256 vs. 100):** Larger batch sizes led to faster training but potential **mode collapse**.
